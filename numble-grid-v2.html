@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Numble">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Numble Grid V2</title>
+<style>
+:root{
+  --ink:#1A1A1A; --ink-edge:#000000; --lime:#8DC63F; --lime-edge:#67982C;
+  --red:#C8322B; --amber:#E0A400; --paper:#EDEDE7; --card:#F8F8F5; --tile:#FFFFFF;
+  --tile-edge:#D3D3CB; --ghost:#B6B6AE; --muted:#75756E; --line:#DEDED6;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--paper);
+  font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+  display:flex; justify-content:center; align-items:flex-start;
+  padding:calc(20px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right))
+          calc(20px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left));
+  min-height:100vh; min-height:100dvh; overscroll-behavior:none;
+  -webkit-text-size-adjust:100%;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  user-select:none; -webkit-user-select:none;
+}
+button{font-family:inherit;border:0;padding:0;background:none;color:inherit;cursor:pointer;}
+.card{width:100%;max-width:420px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+.hdr{background:var(--ink);padding:16px 16px 12px;text-align:center;}
+.hdr h1{margin:0;font-size:20px;font-weight:900;letter-spacing:.14em;color:#fff;}
+.hdr .sub{font-size:12px;letter-spacing:.14em;color:var(--lime);}
+.rule{height:4px;background:var(--lime);}
+.pad{padding:12px 12px 0;}
+.hint{margin:8px 0 4px;font-size:14px;color:var(--muted);}
+.warn{margin:0 0 4px;font-size:14px;color:var(--red);}
+.good{margin:0 0 4px;font-size:14px;color:var(--lime-edge);font-weight:700;}
+
+.wide{width:100%;border-radius:8px;padding:10px 8px;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;transition:transform .075s;}
+.wide:active{transform:translateY(2px);}
+.wide.lime{background:var(--lime);color:#fff;box-shadow:0 3px 0 0 var(--lime-edge);}
+.wide.ink{background:var(--ink);color:#fff;box-shadow:0 3px 0 0 var(--ink-edge);}
+.wide.plain{background:#fff;color:var(--ink);box-shadow:0 2px 0 0 var(--tile-edge);}
+
+.chip{width:100%;border-radius:6px;padding:8px 4px;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;line-height:1.15;
+  background:#fff;color:var(--muted);box-shadow:0 2px 0 0 var(--tile-edge);
+  display:flex;align-items:center;justify-content:center;gap:5px;transition:transform .075s;}
+.chip:active{transform:translateY(2px);}
+.chip.on{background:var(--ink);color:#fff;box-shadow:0 2px 0 0 var(--ink-edge);}
+.chiprow{display:grid;gap:4px;margin-top:4px;}
+.dot{width:8px;height:8px;border-radius:999px;flex:0 0 auto;}
+
+.grid7{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:0 12px 4px;}
+.tile{position:relative;aspect-ratio:1/1;border-radius:8px;
+  background:var(--tile);color:var(--ink);box-shadow:0 3px 0 0 var(--tile-edge);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:900;font-variant-numeric:tabular-nums;transition:transform .075s;}
+.tile:active{transform:translateY(2px);}
+.tile.green{background:var(--lime);color:#fff;box-shadow:0 3px 0 0 var(--lime-edge);}
+.tile.sel{outline:3px solid var(--ink);outline-offset:2px;}
+.tile.partner{outline:3px solid var(--lime);outline-offset:2px;}
+.tile.cycle{outline:3px solid var(--amber);outline-offset:2px;}
+.tile.cycle.sel{outline-color:var(--ink);}
+.cyclebadge{position:absolute;left:3px;bottom:2px;min-width:16px;height:16px;padding:0 4px;
+  border-radius:999px;background:var(--amber);color:#fff;font-size:10px;font-weight:900;
+  line-height:16px;text-align:center;}
+.cyclepanel{margin:8px 12px 12px;padding:11px 12px;border-radius:8px;background:#FFF8E3;
+  color:var(--ink);box-shadow:inset 0 0 0 2px var(--amber);font-size:13px;line-height:1.35;}
+.cyclepanel strong{display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em;font-size:11px;}
+.tile.locked{opacity:.92;}
+.lines{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 12px 12px;}
+.tile.amber{box-shadow:0 3px 0 0 var(--tile-edge), inset 0 0 0 3px var(--amber);}
+.tile.green.amber{box-shadow:0 3px 0 0 var(--lime-edge), inset 0 0 0 3px var(--amber);}
+.wide.amber{background:var(--amber);color:#fff;box-shadow:0 3px 0 0 #A87A00;}
+.wide.off{background:#fff;color:#B6B6AE;box-shadow:0 2px 0 0 var(--tile-edge);}
+.tile.sel.selred{outline-color:var(--red);}
+.tile .big.asred{color:var(--red);}
+.corner{position:absolute;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
+.corner.tr{top:2px;right:3px;font-size:11px;color:var(--red);}
+.corner.tl{top:1px;left:4px;font-size:12px;color:var(--ghost);}
+.clue{position:relative;aspect-ratio:1/1;background:transparent;padding:0;}
+.clue svg{display:block;width:100%;height:100%;}
+
+.status{padding:12px;text-align:center;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
+.banner{margin:0 12px 12px;border-radius:8px;padding:12px;text-align:center;
+  font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;
+  background:var(--lime);color:#fff;box-shadow:0 3px 0 0 var(--lime-edge);}
+
+.ptrlabel{padding:0 12px 4px;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--muted);}
+.ptrrow{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:0 12px 8px;}
+.ptr{border-radius:8px;padding:8px;font-size:14px;font-weight:900;
+  background:var(--tile);color:var(--muted);box-shadow:0 3px 0 0 var(--tile-edge);transition:transform .075s;}
+.ptr:active{transform:translateY(2px);}
+.ptr.on{background:var(--lime);color:#fff;box-shadow:0 3px 0 0 var(--lime-edge);}
+
+.keypad{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;padding:0 12px 12px;}
+.key{aspect-ratio:1/1;border-radius:8px;background:var(--tile);color:var(--ink);
+  box-shadow:0 3px 0 0 var(--tile-edge);font-size:20px;font-weight:900;
+  font-variant-numeric:tabular-nums;transition:transform .075s;}
+.key:active{transform:translateY(2px);}
+.key.redtext{color:var(--red);}
+.key.ink{background:var(--ink);color:#fff;box-shadow:0 3px 0 0 var(--ink-edge);font-size:18px;}
+.nextwrap{padding:0 12px 12px;}
+
+.footer{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px;border-top:1px solid var(--line);}
+.sbtn{border-radius:6px;padding:8px 2px;font-size:12px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;background:#fff;color:var(--ink);
+  box-shadow:0 2px 0 0 var(--tile-edge);transition:transform .075s;}
+.sbtn:active{transform:translateY(2px);}
+.sbtn.armed{background:var(--ink);color:#fff;box-shadow:0 2px 0 0 var(--ink-edge);}
+
+.togglewrap{padding:0 12px 16px;}
+.toggle{width:100%;display:flex;align-items:center;justify-content:space-between;
+  border-radius:6px;padding:8px 12px;background:#fff;box-shadow:0 2px 0 0 var(--tile-edge);
+  text-align:left;transition:transform .075s;}
+.toggle:active{transform:translateY(2px);}
+.toggle .lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);}
+.toggle .pill{border-radius:6px;padding:4px 8px;font-size:12px;font-weight:700;
+  text-transform:uppercase;background:var(--paper);color:var(--muted);}
+.toggle .pill.on{background:var(--lime);color:#fff;}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<input type="file" id="shotfile" accept="image/*" style="display:none">
+<script>
+/* Numble screenshot reader - pure pixel analysis, no dependencies.
+   analyse(rgba, width, height) -> {ok, kinds, digits, dirs, flags} | {ok:false, error} */
+var NumbleScan = (function () {
+  "use strict";
+  var GW = 14, GH = 18, NB = GW * GH;
+
+  var BANK = null;
+  function loadBank(str) {
+    BANK = str.split(",").map(function (s) {
+      var bits = new Uint8Array(NB);
+      for (var i = 0; i < NB; i++) {
+        var nib = parseInt(s.charAt(2 + (i >> 2)), 16);
+        bits[i] = (nib >> (3 - (i & 3))) & 1;
+      }
+      return { d: s.charAt(0), k: s.charAt(1), bits: bits };
+    });
+  }
+
+  function isTile(r, g, b) { return Math.abs(r-239)<=9 && Math.abs(g-240)<=9 && Math.abs(b-242)<=9; }
+  function isGreen(r, g, b) { return Math.abs(r-127)<=34 && Math.abs(g-174)<=34 && Math.abs(b-102)<=34; }
+  function isDark(r, g, b) { return Math.abs(r-70)<=34 && Math.abs(g-72)<=34 && Math.abs(b-71)<=34; }
+
+  function bands(prof, thresh, gap, minlen) {
+    var idx = [], i;
+    for (i = 0; i < prof.length; i++) if (prof[i] >= thresh) idx.push(i);
+    if (!idx.length) return [];
+    var runs = [], s = idx[0], prev = idx[0];
+    for (i = 1; i < idx.length; i++) {
+      if (idx[i] - prev > gap) { runs.push([s, prev]); s = idx[i]; }
+      prev = idx[i];
+    }
+    runs.push([s, prev]);
+    return runs.filter(function (r) { return r[1] - r[0] >= minlen; });
+  }
+
+  function pickSeven(bs) {
+    if (bs.length < 7) return null;
+    if (bs.length === 7) return bs;
+    var best = null;
+    for (var i = 0; i + 7 <= bs.length; i++) {
+      var g = bs.slice(i, i + 7);
+      var cs = g.map(function (b) { return (b[0] + b[1]) / 2; });
+      var dmin = Infinity, dmax = -Infinity;
+      for (var j = 0; j < 6; j++) {
+        var dd = cs[j + 1] - cs[j];
+        if (dd < dmin) dmin = dd;
+        if (dd > dmax) dmax = dd;
+      }
+      var spread = dmax - dmin;
+      if (best === null || spread < best[0]) best = [spread, g];
+    }
+    return best[1];
+  }
+
+  function analyse(d, w, h) {
+    if (!BANK) return { ok: false, error: "glyph bank not loaded" };
+    var step = Math.max(1, Math.round(w / 440));   // ~3 at 1320px wide
+    var x, y, i, n, r, c;
+
+    function at(px, py) { return ((py * w) + px) * 4; }
+    function anyGrid(o) {
+      var R = d[o], G = d[o+1], B = d[o+2];
+      return isTile(R,G,B) || isGreen(R,G,B) || isDark(R,G,B);
+    }
+
+    var rowp = new Int16Array(h), colp = new Int16Array(w);
+    var wSamples = Math.floor(w / step);
+    for (y = 0; y < h; y += step) {
+      n = 0;
+      for (x = 0; x < w; x += step) if (anyGrid(at(x, y))) n++;
+      rowp[y] = Math.floor(100 * n / wSamples);
+    }
+    var rb = pickSeven(bands(rowp, 30, Math.max(4, step * 3), Math.round(h * 0.015)));
+    if (!rb) return { ok: false, error: "could not find seven rows of tiles" };
+    var y0 = rb[0][0], y1 = rb[6][1];
+    var hSamples = Math.max(1, Math.floor((y1 - y0) / step));
+    for (x = 0; x < w; x += step) {
+      n = 0;
+      for (y = y0; y < y1; y += step) if (anyGrid(at(x, y))) n++;
+      colp[x] = Math.floor(100 * n / hSamples);
+    }
+    var cb = pickSeven(bands(colp, 30, Math.max(4, step * 3), Math.round(w * 0.03)));
+    if (!cb) return { ok: false, error: "could not find seven columns of tiles" };
+
+    var rc = rb.map(function (b) { return Math.round((b[0] + b[1]) / 2); });
+    var cc = cb.map(function (b) { return Math.round((b[0] + b[1]) / 2); });
+    var cw = (cb[6][1] - cb[0][0]) / 7, ch = (rb[6][1] - rb[0][0]) / 7;
+    if (cw < 20 || ch < 20) return { ok: false, error: "grid too small to read" };
+
+    /* cell kind */
+    var kinds = [], dy, dx, o;
+    for (r = 0; r < 7; r++) {
+      kinds.push([]);
+      for (c = 0; c < 7; c++) {
+        var vG = 0, vW = 0, vD = 0;
+        for (dy = -Math.floor(ch*0.30); dy < ch*0.30; dy += 3)
+          for (dx = -Math.floor(cw*0.30); dx < cw*0.30; dx += 3) {
+            o = at(cc[c]+dx, rc[r]+dy);
+            var R = d[o], G = d[o+1], B = d[o+2];
+            if (isGreen(R,G,B)) vG++; else if (isTile(R,G,B)) vW++; else if (isDark(R,G,B)) vD++;
+          }
+        kinds[r].push(vD > vG && vD > vW ? "D" : (vG > vW ? "G" : "W"));
+      }
+    }
+
+    /* clue arrows */
+    var DIRS = { right:[1,0], left:[-1,0], down:[0,1], up:[0,-1] };
+    function arrows(r, c) {
+      var out = {}, k;
+      for (k in DIRS) {
+        var ux = DIRS[k][0], uy = DIRS[k][1], hits = 0, tot = 0;
+        for (var f = 0.40; f <= 0.52; f += 0.02)
+          for (var off = -Math.round(cw*0.055); off <= cw*0.055; off += Math.max(1,Math.round(cw*0.018))) {
+            var px2 = Math.round(cc[c] + ux*f*cw - uy*off);
+            var py2 = Math.round(rc[r] + uy*f*ch + ux*off);
+            if (px2 < 0 || py2 < 0 || px2 >= w || py2 >= h) continue;
+            tot++;
+            o = at(px2, py2);
+            if (isDark(d[o], d[o+1], d[o+2])) hits++;
+          }
+        out[k] = tot ? hits / tot : 0;
+      }
+      return { h: out.right > out.left ? "right" : "left",
+               v: out.down > out.up ? "down" : "up" };
+    }
+
+    /* glyph components with edge rejection */
+    function glyphs(r, c, kind) {
+      var half = 0.30;
+      var gx0 = Math.round(cc[c] - cw*half), gx1 = Math.round(cc[c] + cw*half);
+      var gy0 = Math.round(rc[r] - ch*half), gy1 = Math.round(rc[r] + ch*half);
+      var gw = gx1 - gx0, gh = gy1 - gy0;
+      if (gw < 4 || gh < 4) return [];
+      var on = new Uint8Array(gw * gh);
+      for (y = 0; y < gh; y++)
+        for (x = 0; x < gw; x++) {
+          o = at(gx0 + x, gy0 + y);
+          var br = (d[o] + d[o+1] + d[o+2]) / 3;
+          on[y*gw + x] = (kind === "W" ? br < 120 : br > 205) ? 1 : 0;
+        }
+      var seen = new Uint8Array(gw * gh), comps = [], stack = [];
+      var minPix = Math.max(20, Math.round(gw * gh * 0.012));
+      for (var s0 = 0; s0 < on.length; s0++) {
+        if (!on[s0] || seen[s0]) continue;
+        stack.length = 0; stack.push(s0); seen[s0] = 1;
+        var cells = [], touches = false;
+        while (stack.length) {
+          var p = stack.pop(); cells.push(p);
+          var px3 = p % gw, py3 = (p - px3) / gw;
+          if (px3 === 0 || py3 === 0 || px3 === gw-1 || py3 === gh-1) touches = true;
+          var nb = [p+1, p-1, p+gw, p-gw];
+          if (px3 === gw-1) nb[0] = -1;
+          if (px3 === 0) nb[1] = -1;
+          for (i = 0; i < 4; i++) {
+            var q = nb[i];
+            if (q >= 0 && q < on.length && on[q] && !seen[q]) { seen[q] = 1; stack.push(q); }
+          }
+        }
+        if (!touches && cells.length >= minPix) comps.push({ cells: cells, gw: gw });
+      }
+      comps.forEach(function (cp) {
+        var mnx = 1e9, mxx = -1, mny = 1e9, mxy = -1;
+        cp.cells.forEach(function (p) {
+          var a = p % gw, b = (p - a) / gw;
+          if (a < mnx) mnx = a; if (a > mxx) mxx = a;
+          if (b < mny) mny = b; if (b > mxy) mxy = b;
+        });
+        cp.box = [mnx, mny, mxx, mxy];
+      });
+      comps.sort(function (a, b) { return a.box[0] - b.box[0]; });
+      var merged = [];
+      comps.forEach(function (cp) {
+        var last = merged[merged.length - 1];
+        if (last && cp.box[0] <= last.box[2]) {
+          last.cells = last.cells.concat(cp.cells);
+          last.box = [Math.min(last.box[0], cp.box[0]), Math.min(last.box[1], cp.box[1]),
+                      Math.max(last.box[2], cp.box[2]), Math.max(last.box[3], cp.box[3])];
+        } else merged.push(cp);
+      });
+      return merged;
+    }
+
+    function normalise(cp) {
+      var b = cp.box, gw = cp.gw;
+      var bw = b[2]-b[0]+1, bh = b[3]-b[1]+1;
+      var acc = new Float32Array(NB), area = new Float32Array(NB);
+      var mark = {};
+      cp.cells.forEach(function (p) { mark[p] = 1; });
+      for (var yy = b[1]; yy <= b[3]; yy++) {
+        var gy = Math.min(GH-1, Math.floor((yy-b[1]) * GH / bh));
+        for (var xx = b[0]; xx <= b[2]; xx++) {
+          var gx = Math.min(GW-1, Math.floor((xx-b[0]) * GW / bw));
+          var k = gy*GW + gx;
+          area[k]++;
+          if (mark[yy*gw + xx]) acc[k]++;
+        }
+      }
+      var out = new Uint8Array(NB);
+      for (var i2 = 0; i2 < NB; i2++) out[i2] = (area[i2] && acc[i2]/area[i2] > 0.45) ? 1 : 0;
+      return out;
+    }
+
+    function match(bits, kind) {
+      var wantK = kind === "D" ? "D" : "T";
+      var bestSame = null, bestOther = null, sameKind = false, e, dist, j;
+      function scan(filterK) {
+        var b1 = null, b2 = null;
+        for (e = 0; e < BANK.length; e++) {
+          if (filterK && BANK[e].k !== wantK) continue;
+          dist = 0;
+          for (j = 0; j < NB; j++) if (BANK[e].bits[j] !== bits[j]) dist++;
+          if (!b1 || dist < b1[0]) b1 = [dist, BANK[e].d];
+        }
+        if (!b1) return null;
+        for (e = 0; e < BANK.length; e++) {
+          if (filterK && BANK[e].k !== wantK) continue;
+          if (BANK[e].d === b1[1]) continue;
+          dist = 0;
+          for (j = 0; j < NB; j++) if (BANK[e].bits[j] !== bits[j]) dist++;
+          if (!b2 || dist < b2[0]) b2 = [dist, BANK[e].d];
+        }
+        return [b1, b2];
+      }
+      var res = scan(true);
+      if (res && res[0]) { sameKind = true; }
+      else res = scan(false);
+      if (!res || !res[0]) return { d: "", conf: 0 };
+      var ratio = res[1] ? res[1][0] / Math.max(1, res[0][0]) : 99;
+      return { d: res[0][1], conf: sameKind ? ratio : Math.min(ratio, 2) };
+    }
+
+    var digits = [], dirs = [], flags = [];
+    for (r = 0; r < 7; r++) {
+      digits.push([]); dirs.push([]);
+      for (c = 0; c < 7; c++) {
+        var kind = kinds[r][c];
+        var gs = glyphs(r, c, kind);
+        var s = "", worst = 99;
+        for (i = 0; i < gs.length && i < 2; i++) {
+          var m = match(normalise(gs[i]), kind);
+          s += m.d;
+          if (m.conf < worst) worst = m.conf;
+        }
+        digits[r].push(s);
+        dirs[r].push(kind === "D" ? arrows(r, c) : { h: "", v: "" });
+        if (!s || worst < 2.5) flags.push([r, c, s, Math.round(worst * 10) / 10]);
+      }
+    }
+    return { ok: true, kinds: kinds, digits: digits, dirs: dirs, flags: flags,
+             cell: Math.round(cw) + "x" + Math.round(ch) };
+  }
+
+  return { analyse: analyse, loadBank: loadBank };
+})();
+
+
+NumbleScan.loadBank("0D0fc0ff8703180ee01b006c01b007c01f007c01f006e0198066031c1c3fe03f0,0D0fc0ff8703180ee01b006c01f007c01f007c01f006e01b8066031c1c3fe03f0,0D0fc0ff8703180ee01b006c01b007c01f007c01f006e0198066031c1c3fe03f0,0D0fc0ff8703180ee01b006c01b007c01f007c01f006e0198066031c1c3fe07f0,1T07807e07f83fe0e7801e007801e007801e007801e007801e00783ffffffffff,1T07807e07f83fe0e7801e007801e007801e007801e007801e00783ffffffdfff,1T07807e07f83fe0e7801e007801e007801e007801e007801e00783ffffffffff,1T07807e07f83fe0e7801e007801e007801e007801e007801e00783ffefffffff,1D0f01fc0f7031c007001c007001c007001c007001c007001c007001c0fffffff,1D0f01fc0f7031c007001c007001c007001c007001c007001c007001c0fffffff,1D0f01fc0f7031c007001c007001c007001c007001c007001c007001c0fffffff,2T3fc3ffcfff101e007801e007803c00f007803c01e00f00f807c01ffefffdffe,2T1f81ff8fff303e007801e007803c00f007803c01e00f007807c01ffefffdffe,2T3fc3ffcfff101e007801e007803c00f007803c01e00f00f807c01ffefffdffe,2T1f81ff8fff303e007801e007803c00f007803c01e00f007807c01ffefffdffe,2D3fc3ff8c07000c003800c003001c00e007003801c00e007003801c00fff9fff,2D3fc3ff8c07000c003800c003001c00e007803801c00e007003801c00fff9fff,2D3fc3ff8c07000c003800c003001c00e007803801c00e007003801c00fff9fff,3T1fc1ffcfff901e003800e00781fc1fe07fc007800f003c00fe07fffe7ff07f0,3T3fe1ffcfff901e003800e00783fc1fe07fc007800f001c00fe07fffe7ff07f0,3T1fc1ffcfff901e003800e00781fc1fe07fc007800f001c00fe07fffe7ff07f0,3T3fe1ffcfff901e003800e00783fc1fe07fc007800f003c00fe07fffe7ff07f0,3D1fc1ffcc0380060018006003001c0fc03fc0038006001c007001b80e7ff0ff8,3D1fe1ffcc0380060018006003001c0fc03fc0038006001c007001b80e7ff0ff8,4T00e007801e00f807e01f80ee073838e0e3870e3c3cfffffff00e003800e0018,4T00e007801e00f807e01f80ee073838e0e3870e3c3cfffffff00e003800e0018,4T00e007801e00f807e01f80ee073838e0e3870e3c3cfffffff00e003800e0018,4T00e007801e00f807e01f80ee073838e0e3870e3c3cfffffff00e003800e0018,4D00e007801e00f806e01b80ce063818e0c3860e3838fffffff00e003800e0018,4D00e007801e00f806e01b80ce063818e0c3860e3038fffffff00e003800e0018,4D00e007801e00f806e01b80ce063818e0c3860e3838fffffff00e003800e0018,4D00e007801e00f806e01b80ce063818e0c3860e3838fffffff00e003800e0018,5T7ffbffefff3c00f003c00f383ffcfffbc1e603c00f003c00fe07fffe7ff07e0,5T7ffbffefff3c00f003c00f383ffcfffbc1e603c00f003c00fe07fffe7ff07e0,5T7ffbffefff3c00f003c00f383ffcfffbc1e603c00f003c00fe07fffe7ff07e0,5T7ffbffefff3c00f003c00f383ffcfffbc1e603c00f003c00fe07fffe7ff07e0,6T07e07fe3ffde027003c00e0039fceffbe1ef03fc0ff03fc0f7878ffe1ff01f0,6T0ff07ff3ffde027003c00e1839fceffbe1ef03fc0ff03fc0f7878ffe1ff01f0,6T07f07ff3ffde027003c00e1c39fceffbe1ef03fc0ff01fc0f7878ffe1ff01f0,6T07e07fe3ffde027003c00e0039fceffbe1ef03fc0ff03fc0f7878ffe1ff01f0,6D07e0ffe381d800e003000c0033f8dff3c0ee01f807e01f8076019c0e3ff03f8,6D07e0ffe381d800e003000c0033f8dff3c0ee01f807e01f8076019c0e3ff07f8,6D07e0ffe381d800e003000c0033f8dff3c0ee01f807e01f8076019c0e3ff03f8,6D07e0ffe381d800e003000c0033f8dff3c0ee01b807e01f8076019c0e3ff03f8,7Tfffffff7ffc01e007803c00e007803c00f007801c00f007801e00f003c00e00,7Tfffffff7ffc01e007803c00e007803c00f007801c00f007801e00f003c00e00,7Tfffffff7ffc01e007803c00e007803c00f007801c00f007801e00f003c00e00,7Tfffffff7ffc01e007803c00e007803c00f007801c00f007801e00f003c00e00,7Dfffc007003801c007003800e007001800e007001c00e003001c00e003800c00,7Dfffc007003801c007003800e007001800e007001c00e003001c00e003800c00,8D1fc1ffc603b806e01b8066019c0c3fe1ffc601b007c01f007c01f80e7ff07f8,8D1fc1ffc603b806c01b8066019c0c3fe1ffc601b007c01f007c01f80e7ff07f8,8D1fc1ffc603b806e01b8066019c0c3fe0ffc601b007c01f007c01f80e7ff07f8,8D1fc1ffc603b806e01b8066019c0c3fe0ffc601b007c01f007c01f80e7ff07f8,9D1f80ff8607300ec01b007c01f00f607df7f1f1c0070018006003303c7fe0fe0,9D1f81ff8607300ec01b007c01f00f607df7f1f1c0070018006003301c7fe0fe0,9D1f80ff8607300ec01b007c01f00f607df7f1f1c0070018006003301c7fe0fe0");
+</script>
+<script>
+(function () {
+"use strict";
+
+/* =================================================================== *
+ *  PUZZLE DATA - only needed as a fallback; normally you load a
+ *  screenshot instead. "." marks the nine clue-bubble positions.
+ * =================================================================== */
+
+var PUZZLE_NO = "#160";
+
+var TILES = [
+  ["2", "1", "4", "3", "7", "6", "4"],
+  ["5", ".", "1", ".", "5", ".", "2"],
+  ["1", "5", "3", "4", "2", "7", "4"],
+  ["6", ".", "6", ".", "3", ".", "5"],
+  ["3", "7", "1", "3", "6", "3", "7"],
+  ["2", ".", "7", ".", "4", ".", "4"],
+  ["7", "2", "2", "5", "1", "5", "6"]
+];
+
+var GREENS = [
+  [0, 0, 1, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [1, 0, 1, 0, 1, 0, 1],
+  [0, 0, 1, 0, 1, 0, 0],
+  [1, 0, 1, 0, 1, 0, 1],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 1, 0, 0]
+];
+
+var CLUES = {
+  "2,2": { n: "8",  h: "left",  v: "down" },
+  "2,4": { n: "14", h: "left",  v: "down" },
+  "2,6": { n: "3",  h: "right", v: "up"   },
+  "4,2": { n: "6",  h: "left",  v: "down" },
+  "4,4": { n: "10", h: "left",  v: "down" },
+  "4,6": { n: "8",  h: "left",  v: "up"   },
+  "6,2": { n: "14", h: "left",  v: "down" },
+  "6,4": { n: "9",  h: "right", v: "down" },
+  "6,6": { n: "6",  h: "right", v: "down" }
+};
+
+/* =================================================================== *
+ *  App
+ * =================================================================== */
+
+var SIZE = 7, N = 49;
+var PUZZLE_ID = "NUMBLE " + PUZZLE_NO;
+var KEY = "numble-grid:v3";
+var SAVE_SCHEMA = 1;
+
+var TAIL = {
+  right: "70,38 100,50 70,62",
+  left:  "30,38 0,50 30,62",
+  up:    "38,30 50,0 62,30",
+  down:  "38,70 50,100 62,70"
+};
+var POINTERS = [
+  { dir: "left",  glyph: "\u25C0", axis: "h" },
+  { dir: "right", glyph: "\u25B6", axis: "h" },
+  { dir: "up",    glyph: "\u25B2", axis: "v" },
+  { dir: "down",  glyph: "\u25BC", axis: "v" }
+];
+
+function filled(v) { var a = [], i; for (i = 0; i < N; i++) a.push(v); return a; }
+function emptyDirs() { var a = [], i; for (i = 0; i < N; i++) a.push({ h: "", v: "" }); return a; }
+
+function buildPuzzle() {
+  var vals = filled(""), green = filled(false), dirs = emptyDirs(), r, c, i, t;
+  for (r = 0; r < SIZE; r++) {
+    for (c = 0; c < SIZE; c++) {
+      i = r * SIZE + c;
+      t = TILES[r][c];
+      if (t !== ".") { vals[i] = t; green[i] = GREENS[r][c] === 1; }
+    }
+  }
+  Object.keys(CLUES).forEach(function (k) {
+    var p = k.split(",");
+    var j = (Number(p[0]) - 1) * SIZE + (Number(p[1]) - 1);
+    vals[j] = CLUES[k].n;
+    dirs[j] = { h: CLUES[k].h, v: CLUES[k].v };
+  });
+  return { vals: vals, green: green, dirs: dirs };
+}
+
+function freshState() {
+  var p = buildPuzzle();
+  return {
+    green: p.green, vals: p.vals, reds: filled(""), yellow: filled(false), dirs: p.dirs,
+    step: "red", sel: null,
+    playVals: null, pair: [], swaps: 0, hist: [], armClear: false,
+    scanned: false, msg: null
+  };
+}
+
+var S = freshState();
+
+/* ---------- persistence ---------- */
+
+function validArray(a) { return Array.isArray(a) && a.length === N; }
+function validDirs(a) {
+  return validArray(a) && a.every(function (d) {
+    return d && typeof d === "object" && (d.h === null || typeof d.h === "string") &&
+      (d.v === null || typeof d.v === "string");
+  });
+}
+function validHist(a) {
+  return Array.isArray(a) && a.every(function (m) {
+    return Array.isArray(m) && m.length === 2 && Number.isInteger(m[0]) && Number.isInteger(m[1]) &&
+      m[0] >= 0 && m[0] < N && m[1] >= 0 && m[1] < N;
+  });
+}
+
+function save() {
+  try {
+    localStorage.setItem(KEY, JSON.stringify({
+      schema: SAVE_SCHEMA, puzzle: PUZZLE_ID,
+      green: S.green, vals: S.vals, reds: S.reds, yellow: S.yellow, dirs: S.dirs,
+      step: S.step === "fix" ? "red" : S.step,
+      playVals: S.playVals, swaps: S.swaps, hist: S.hist, scanned: S.scanned
+    }));
+  } catch (e) {}
+}
+
+function restore() {
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (!raw) return;
+    var o = JSON.parse(raw);
+    // schema is optional so existing v3 saves continue to restore.
+    if (!o || (o.schema && o.schema > SAVE_SCHEMA) || !validArray(o.vals)) return;
+    if (!validArray(o.green) || !validArray(o.reds) || !validDirs(o.dirs)) return;
+    S.green = o.green.slice(); S.vals = o.vals.slice(); S.reds = o.reds.slice(); S.dirs = o.dirs.slice();
+    S.yellow = validArray(o.yellow) ? o.yellow.slice() : filled(false);
+    S.step = ["red", "play", "free"].indexOf(o.step) >= 0 ? o.step : "red";
+    S.playVals = validArray(o.playVals) ? o.playVals.slice() : null;
+    S.swaps = Number.isInteger(o.swaps) && o.swaps >= 0 ? o.swaps : 0;
+    S.hist = validHist(o.hist) ? o.hist.slice() : [];
+    S.scanned = !!o.scanned;
+  } catch (e) {}
+}
+
+function forget() { try { localStorage.removeItem(KEY); } catch (e) {} }
+
+/* ---------- cell logic ---------- */
+
+function isClue(i) { var r = Math.floor(i / SIZE), c = i % SIZE; return r % 2 === 1 && c % 2 === 1; }
+function maxLen(i) { return isClue(i) ? 2 : 1; }
+function inPlay() { return S.step === "play" || S.step === "free"; }
+function inGuided() { return S.step === "play"; }
+function inFix() { return S.step === "fix"; }
+function board() { return S.playVals || S.vals; }
+
+/* Every square carries a target. A green square is already right, so its target
+   is the digit it started with. A white square's target is its red number, or -
+   if it was marked as-is - the digit it already holds. */
+function targets() {
+  var t = filled(""), i;
+  for (i = 0; i < N; i++) {
+    if (isClue(i)) continue;
+    t[i] = S.green[i] ? S.vals[i] : (S.yellow[i] ? S.vals[i] : S.reds[i]);
+  }
+  return t;
+}
+
+function pending() {
+  var n = 0, i;
+  for (i = 0; i < N; i++)
+    if (!isClue(i) && !S.green[i] && !S.reds[i] && !S.yellow[i]) n++;
+  return n;
+}
+
+/* Squares that would BOTH go green if swapped with square i: not yet green,
+   holding the digit i needs, and needing the digit i holds. */
+function partners(i) {
+  var out = [], t = targets(), b = board(), j;
+  if (i === null || isClue(i)) return out;
+  var myVal = b[i], myTgt = t[i];
+  if (!myTgt || myVal === myTgt) return out;
+  for (j = 0; j < N; j++) {
+    if (j === i || isClue(j)) continue;
+    if (t[j] && b[j] === t[j]) continue;
+    if (b[j] === myTgt && t[j] === myVal) out.push(j);
+  }
+  return out;
+}
+
+function hasAnyReciprocal() {
+  var t = targets(), b = board(), i, j;
+  for (i = 0; i < N; i++) {
+    if (isClue(i) || !t[i] || b[i] === t[i]) continue;
+    for (j = i + 1; j < N; j++) {
+      if (isClue(j) || !t[j] || b[j] === t[j]) continue;
+      if (b[j] === t[i] && t[j] === b[i]) return true;
+    }
+  }
+  return false;
+}
+
+function findCycle(start) {
+  var t = targets(), b = board();
+  if (start === null || isClue(start) || !t[start] || b[start] === t[start]) return [];
+  var unsolved = [], i;
+  for (i = 0; i < N; i++)
+    if (!isClue(i) && t[i] && b[i] !== t[i]) unsolved.push(i);
+
+  function dfs(cur, path, used) {
+    var need = t[cur], k, nxt, out;
+    for (k = 0; k < unsolved.length; k++) {
+      nxt = unsolved[k];
+      if (b[nxt] !== need) continue;
+      if (nxt === start) return path.length >= 2 ? path.slice() : [];
+      if (used[nxt]) continue;
+      used[nxt] = true; path.push(nxt);
+      out = dfs(nxt, path, used);
+      if (out.length) return out;
+      path.pop(); used[nxt] = false;
+    }
+    return [];
+  }
+
+  var used = {}; used[start] = true;
+  var cycle = dfs(start, [start], used);
+  return cycle.length >= 3 ? cycle : [];
+}
+
+function cycleLabel(cycle) {
+  if (!cycle || !cycle.length) return "";
+  var b = board(), t = targets(), parts = [], i;
+  for (i = 0; i < cycle.length; i++) parts.push(b[cycle[i]] + " needs " + t[cycle[i]]);
+  return parts.join(" → ");
+}
+
+function cycleDigits(cycle) {
+  if (!cycle || !cycle.length) return "";
+  var b = board(), out = [], i;
+  for (i = 0; i < cycle.length; i++) out.push(b[cycle[i]]);
+  out.push(b[cycle[0]]);
+  return out.join(" → ");
+}
+
+function playStats() {
+  var t = targets(), b = board(), i, tiles = 0, solved = 0, untargeted = 0;
+  for (i = 0; i < N; i++) {
+    if (isClue(i)) continue;
+    tiles++;
+    if (t[i] === "") untargeted++;
+    else if (b[i] === t[i]) solved++;
+  }
+  return { tiles: tiles, solved: solved, untargeted: untargeted,
+           complete: tiles > 0 && solved === tiles };
+}
+
+function subsetOf(step) {
+  var out = [], i;
+  if (step === "red") { for (i = 0; i < N; i++) if (!isClue(i) && !S.green[i]) out.push(i); }
+  else if (step === "fix") { for (i = 0; i < N; i++) out.push(i); }
+  return out;
+}
+
+/* ---------- actions ---------- */
+
+function setStep(step) {
+  S.step = step;
+  S.pair = [];
+  if (step === "play" || step === "free") { S.sel = null; return; }
+  var list = subsetOf(step), pick = null, k;
+  if (step === "red") {
+    for (k = 0; k < list.length; k++)
+      if (!S.reds[list[k]] && !S.yellow[list[k]]) { pick = list[k]; break; }
+  }
+  if (pick === null && S.sel !== null && list.indexOf(S.sel) !== -1) pick = S.sel;
+  if (pick === null && list.length) pick = list[0];
+  S.sel = pick;
+}
+
+function nextIn(from) {
+  var list = subsetOf(S.step), k;
+  for (k = 0; k < list.length; k++) if (list[k] > from) return list[k];
+  return null;
+}
+
+function prevIn(from) {
+  var list = subsetOf(S.step), k, out = null;
+  for (k = 0; k < list.length; k++) { if (list[k] < from) out = list[k]; else break; }
+  return out;
+}
+
+function pressDigit(d) {
+  if (S.sel === null || inPlay()) return;
+  var i = S.sel, n;
+  if (inFix()) {
+    var max = maxLen(i), cur = S.vals[i];
+    S.vals[i] = cur.length >= max ? d : cur + d;
+    S.playVals = null; S.swaps = 0; S.hist = [];
+    if (!isClue(i) && S.vals[i].length >= max) { n = nextIn(i); if (n !== null) S.sel = n; }
+  } else {
+    S.reds[i] = d;
+    S.yellow[i] = false;
+    n = nextIn(i); if (n !== null) S.sel = n;
+  }
+  update();
+}
+
+function markAsIs() {
+  if (S.sel === null || inPlay() || inFix()) return;
+  var i = S.sel;
+  if (S.yellow[i]) { S.yellow[i] = false; }
+  else {
+    S.yellow[i] = true; S.reds[i] = "";
+    var n = nextIn(i); if (n !== null) S.sel = n;
+  }
+  update();
+}
+
+function backspace() {
+  if (S.sel === null || inPlay()) return;
+  var i = S.sel;
+  if (inFix()) {
+    S.playVals = null; S.swaps = 0; S.hist = [];
+    if (S.vals[i] !== "") { S.vals[i] = S.vals[i].slice(0, -1); update(); return; }
+    var p = prevIn(i);
+    if (p !== null) { S.sel = p; S.vals[p] = ""; }
+    update(); return;
+  }
+  if (S.reds[i] !== "" || S.yellow[i]) { S.reds[i] = ""; S.yellow[i] = false; update(); return; }
+  var q = prevIn(i);
+  if (q !== null) { S.sel = q; S.reds[q] = ""; S.yellow[q] = false; }
+  update();
+}
+
+function advance() { var n = nextIn(S.sel === null ? -1 : S.sel); if (n !== null) { S.sel = n; update(); } }
+
+function togglePointer(dir, axis) {
+  if (S.sel === null || !isClue(S.sel)) return;
+  var cur = S.dirs[S.sel];
+  S.dirs[S.sel] = { h: cur.h, v: cur.v };
+  S.dirs[S.sel][axis] = cur[axis] === dir ? "" : dir;
+  update();
+}
+
+function toggleGreen() {
+  if (S.sel === null || isClue(S.sel)) return;
+  S.green[S.sel] = !S.green[S.sel];
+  S.playVals = null; S.swaps = 0; S.hist = [];
+  if (S.green[S.sel]) { S.reds[S.sel] = ""; S.yellow[S.sel] = false; }
+  update();
+}
+
+function enterPlay() {
+  if (pending() > 0) return;
+  if (S.playVals === null) S.playVals = S.vals.slice();
+  setStep("play");
+  update();
+}
+
+function restartPlay() { S.playVals = S.vals.slice(); S.pair = []; S.swaps = 0; S.hist = []; update(); }
+
+function tapPlayCell(i) {
+  if (isClue(i)) return;
+  if (!S.hist) S.hist = [];
+  if (S.pair.length === 1 && S.pair[0] !== i) S.hist.push([S.pair[0], i]);
+  if (S.pair.length === 0) { S.pair = [i]; update(); return; }
+  if (S.pair[0] === i) { S.pair = []; update(); return; }
+  var a = S.pair[0], nv = board().slice(), tmp = nv[a];
+  nv[a] = nv[i]; nv[i] = tmp;
+  S.playVals = nv;
+  S.swaps++;
+  S.pair = [];
+  update();
+}
+
+function tapCell(i) {
+  if (inFree()) { tapFreeCell(i); return; }
+  if (inPlay()) { tapPlayCell(i); return; }
+  if (inFix()) { S.sel = i; update(); return; }
+  if (isClue(i) || S.green[i]) return;
+  S.sel = i;
+  update();
+}
+
+function clearRed() { S.reds = filled(""); S.yellow = filled(false); update(); }
+
+function reloadPuzzle() { forget(); S = freshState(); update(); }
+
+function clearAll() {
+  forget();
+  S = freshState();
+  S.green = filled(false); S.vals = filled(""); S.dirs = emptyDirs();
+  setStep("fix");
+  update();
+}
+
+
+/* ---------- the actual Numble rule ----------
+   Each of the four odd rows and four odd columns must hold 1-7 exactly once.
+   (Each clue bubble is the sum of the two tiles its arrows point at, which is
+   what makes the solution unique - but the win condition is the 1-7 rule.) */
+
+var LINES = (function () {
+  var L = [], r, c, cells;
+  for (r = 0; r < SIZE; r += 2) {
+    cells = []; for (c = 0; c < SIZE; c++) cells.push(r * SIZE + c);
+    L.push({ kind: "row", n: r / 2 + 1, cells: cells });
+  }
+  for (c = 0; c < SIZE; c += 2) {
+    cells = []; for (r = 0; r < SIZE; r++) cells.push(r * SIZE + c);
+    L.push({ kind: "col", n: c / 2 + 1, cells: cells });
+  }
+  return L;
+})();
+
+function lineDone(line, b) {
+  var seen = {}, k, v;
+  for (k = 0; k < line.cells.length; k++) {
+    v = b[line.cells[k]];
+    if (!v || v < "1" || v > "7" || seen[v]) return false;
+    seen[v] = 1;
+  }
+  return true;
+}
+
+function lineState() {
+  var b = board(), out = { done: 0, flags: [] }, i;
+  for (i = 0; i < LINES.length; i++) {
+    var ok = lineDone(LINES[i], b);
+    out.flags.push(ok);
+    if (ok) out.done++;
+  }
+  return out;
+}
+
+/* a tile is settled once every line it belongs to holds 1-7 */
+function settled(i, ls) {
+  if (isClue(i)) return false;
+  var any = false, k;
+  for (k = 0; k < LINES.length; k++) {
+    if (LINES[k].cells.indexOf(i) === -1) continue;
+    any = true;
+    if (!ls.flags[k]) return false;
+  }
+  return any;
+}
+
+function inFree() { return S.step === "free"; }
+
+function enterFree() {
+  if (S.playVals === null) S.playVals = S.vals.slice();
+  S.pair = []; S.sel = null; S.hist = [];
+  S.step = "free";
+  update();
+}
+
+function undoSwap() {
+  if (!S.hist || !S.hist.length) return;
+  var m = S.hist.pop(), nv = board().slice(), t = nv[m[0]];
+  nv[m[0]] = nv[m[1]]; nv[m[1]] = t;
+  S.playVals = nv;
+  if (S.swaps > 0) S.swaps--;
+  S.pair = [];
+  update();
+}
+
+function tapFreeCell(i) {
+  if (isClue(i) || S.green[i]) return;      // scanned greens are already right
+  if (S.pair.length === 0) { S.pair = [i]; update(); return; }
+  if (S.pair[0] === i) { S.pair = []; update(); return; }
+  var a = S.pair[0], nv = board().slice(), t = nv[a];
+  nv[a] = nv[i]; nv[i] = t;
+  S.playVals = nv;
+  if (!S.hist) S.hist = [];
+  S.hist.push([a, i]);
+  S.swaps++;
+  S.pair = [];
+  update();
+}
+
+/* ---------- screenshot import ---------- */
+
+function applyScan(R) {
+  var i, r, c;
+  S.green = filled(false); S.vals = filled(""); S.dirs = emptyDirs();
+  S.reds = filled(""); S.yellow = filled(false);
+  S.playVals = null; S.pair = []; S.swaps = 0; S.scanned = true;
+  for (r = 0; r < 7; r++) for (c = 0; c < 7; c++) {
+    i = r * SIZE + c;
+    S.vals[i] = R.digits[r][c];
+    S.green[i] = R.kinds[r][c] === "G";
+    if (R.kinds[r][c] === "D") S.dirs[i] = { h: R.dirs[r][c].h, v: R.dirs[r][c].v };
+  }
+  setStep("red");
+  var tiles = 0, clues = 0;
+  for (i = 0; i < N; i++) { if (isClue(i)) clues++; else if (S.vals[i]) tiles++; }
+  var msg = "Read " + tiles + " tiles and " + clues + " clues.";
+  if (R.flags.length) {
+    msg += " Check " + R.flags.map(function (f) { return "r" + (f[0]+1) + "c" + (f[1]+1); })
+      .join(", ") + " - not confident.";
+  } else {
+    msg += " Now type the red targets.";
+  }
+  S.msg = { text: msg, bad: R.flags.length > 0 };
+  update();
+}
+
+function readShot(file) {
+  if (!file) return;
+  S.msg = { text: "Reading screenshot\u2026", bad: false }; render();
+  var fr = new FileReader();
+  fr.onerror = function () { S.msg = { text: "Could not read that file.", bad: true }; render(); };
+  fr.onload = function () {
+    var img = new Image();
+    img.onerror = function () { S.msg = { text: "That file is not an image.", bad: true }; render(); };
+    img.onload = function () {
+      try {
+        var scale = Math.min(1, 2000 / img.width);
+        var cw2 = Math.round(img.width * scale), chh = Math.round(img.height * scale);
+        var cv = document.createElement("canvas");
+        cv.width = cw2; cv.height = chh;
+        var ctx = cv.getContext("2d", { willReadFrequently: true });
+        ctx.drawImage(img, 0, 0, cw2, chh);
+        var R = NumbleScan.analyse(ctx.getImageData(0, 0, cw2, chh).data, cw2, chh);
+        if (!R.ok) {
+          S.msg = { text: R.error + " - crop to the puzzle grid and try again.", bad: true };
+          render(); return;
+        }
+        applyScan(R);
+      } catch (e) {
+        S.msg = { text: "Could not analyse that image (" + e.message + ").", bad: true };
+        render();
+      }
+    };
+    img.src = fr.result;
+  };
+  fr.readAsDataURL(file);
+}
+
+/* ---------- rendering ---------- */
+
+function clueSVG(i, isSel) {
+  var d = S.dirs[i] || { h: "", v: "" }, v = S.vals[i] || "";
+  var s = '<svg viewBox="0 0 100 100" aria-hidden="true">';
+  if (d.h && TAIL[d.h]) s += '<polygon points="' + TAIL[d.h] + '" fill="#1A1A1A"/>';
+  if (d.v && TAIL[d.v]) s += '<polygon points="' + TAIL[d.v] + '" fill="#1A1A1A"/>';
+  s += '<circle cx="50" cy="50" r="32" fill="#1A1A1A"/>';
+  if (isSel) s += '<circle cx="50" cy="50" r="35" fill="none" stroke="#8DC63F" stroke-width="5"/>';
+  if (v) s += '<text x="50" y="50" dy="0.35em" text-anchor="middle" fill="#FFFFFF" ' +
+    'font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="' +
+    (v.length > 1 ? 40 : 46) + '">' + v + '</text>';
+  return s + '</svg>';
+}
+
+function cellHTML(i, t, b, mates, cycle) {
+  var r = Math.floor(i / SIZE) + 1, c = (i % SIZE) + 1;
+  var pos = 'Row ' + r + ' column ' + c + ', ';
+
+  if (isClue(i)) {
+    var d = S.dirs[i] || { h: "", v: "" };
+    var pt = [d.h, d.v].filter(Boolean).join(" and ");
+    return '<button class="clue" data-act="cell" data-i="' + i + '" aria-label="' + pos +
+      'clue ' + (S.vals[i] || "empty") + (pt ? ", pointing " + pt : "") + '">' +
+      clueSVG(i, S.sel === i && inFix()) + '</button>';
+  }
+
+  if (inFree()) {
+    var fd = b[i] || "", lock = S.green[i], ok = lock || settled(i, mates.ls);
+    var pk = S.pair.indexOf(i) !== -1;
+    return '<button class="tile' + (ok ? " green" : "") + (lock ? " locked" : "") +
+      (pk ? " sel" : "") + '" data-act="cell" data-i="' + i + '" aria-label="' + pos +
+      (ok ? "green" : "white") + ', ' + (fd || "empty") + (lock ? ", locked" : "") + '">' +
+      '<span class="big">' + fd + '</span></button>';
+  }
+
+  if (inPlay()) {
+    var want = t[i], digit = b[i] || "";
+    var done = want !== "" && digit === want;
+    var picked = S.pair.indexOf(i) !== -1;
+    var mate = mates.indexOf(i) !== -1;
+    var cycleAt = cycle ? cycle.indexOf(i) : -1;
+    return '<button class="tile' + (done ? " green" : "") + (S.yellow[i] ? " amber" : "") +
+      (cycleAt !== -1 ? " cycle" : "") + (picked ? " sel" : (mate ? " partner" : "")) +
+      '" data-act="cell" data-i="' + i + '" aria-label="' + pos +
+      (done ? "green" : "white") + ', ' + (digit || "empty") +
+      (want && !done ? ", needs " + want : "") + (mate ? ", swap match" : "") +
+      (cycleAt !== -1 ? ", cycle step " + (cycleAt + 1) : "") + '">' +
+      (want && !done ? '<span class="corner tr">' + want + '</span>' : '') +
+      (cycleAt !== -1 ? '<span class="cyclebadge">' + (cycleAt + 1) + '</span>' : '') +
+      '<span class="big">' + digit + '</span></button>';
+  }
+
+  var sel = S.sel === i;
+  var hasRed = !S.green[i] && S.reds[i] !== "";
+  return '<button class="tile' + (S.green[i] ? " green" : "") +
+    (S.yellow[i] && !S.green[i] ? " amber" : "") + (sel ? " sel" : "") +
+    '" data-act="cell" data-i="' + i + '" aria-label="' + pos +
+    (S.green[i] ? "green" : "white") + (S.vals[i] ? ", " + S.vals[i] : ", empty") +
+    (hasRed ? ", red " + S.reds[i] : "") + (S.yellow[i] ? ", as-is" : "") + '">' +
+    (hasRed && S.vals[i] ? '<span class="corner tl">' + S.vals[i] + '</span>' : '') +
+    '<span class="big' + (hasRed ? " asred" : "") + '">' +
+    (hasRed ? S.reds[i] : (S.vals[i] || "")) + '</span></button>';
+}
+
+function render() {
+  var t = targets(), b = board(), ps = playStats(), i;
+  var ls = inPlay() ? lineState() : { done: 0, flags: [] };
+  var mates = inGuided() && S.pair.length === 1 ? partners(S.pair[0]) : [];
+  var reciprocalLeft = inGuided() ? hasAnyReciprocal() : false;
+  var cycle = inGuided() && S.pair.length === 1 && !reciprocalLeft && mates.length === 0
+    ? findCycle(S.pair[0]) : [];
+  mates.ls = ls;
+  var left = pending();
+  var h = '<div class="card">';
+
+  h += '<div class="hdr"><h1>NUMBLE GRID</h1><div class="sub">' +
+    (S.scanned ? "SCANNED GRID" : PUZZLE_ID) + '</div></div>';
+  h += '<div class="rule"></div>';
+
+  h += '<div class="pad">';
+  if (inFree()) {
+    h += '<button class="wide plain" data-act="edit">\u2190 Back to editing</button>';
+    h += '<p class="hint">Swap any two loose tiles. A tile goes green once every line ' +
+      'it sits in holds 1 to 7. Tiles the puzzle already had green are locked.</p>';
+  } else if (inPlay()) {
+    h += '<button class="wide plain" data-act="edit">\u2190 Back to editing</button>';
+    h += '<p class="hint">Tap a square and any reciprocal swap is ringed in green. ' +
+      'When no reciprocal swaps remain, tapping an unsolved square traces its full cycle in amber.</p>';
+    if (ps.untargeted > 0) {
+      h += '<p class="warn">' + ps.untargeted + (ps.untargeted === 1 ? ' square has' : ' squares have') +
+        ' no target, so they can never turn green.</p>';
+    }
+  } else {
+    h += '<button class="wide plain" style="margin-bottom:4px" data-act="scan">' +
+      '\u2b06 Load from screenshot</button>';
+    h += '<button class="wide ' + (inFix() ? "ink" : "off") + '" data-act="togglefix">' +
+      '\u270e Fix grid ' + (inFix() ? "on" : "off") + '</button>';
+    h += '<p class="hint">' + (inFix()
+      ? "Tap any square, then type to correct the number the screenshot read."
+      : "Tap a white square and type its red target. If you cannot work one out, mark it as-is.")
+      + '</p>';
+    if (S.msg) h += '<p class="' + (S.msg.bad ? "warn" : "good") + '">' + S.msg.text + '</p>';
+  }
+  h += '</div>';
+
+  h += '<div class="grid7">';
+  for (i = 0; i < N; i++) h += cellHTML(i, t, b, mates, cycle);
+  h += '</div>';
+
+  if (inGuided() && S.pair.length === 1 && !reciprocalLeft) {
+    if (cycle.length) {
+      h += '<div class="cyclepanel"><strong>Cycle found</strong>' +
+        cycleDigits(cycle) + '<br><span class="muted">Follow the numbered amber tiles: ' +
+        cycleLabel(cycle) + '. A ' + cycle.length + '-tile cycle takes ' + (cycle.length - 1) +
+        ' swaps to resolve.</span></div>';
+    } else {
+      h += '<div class="cyclepanel"><strong>No reciprocal swaps remain</strong>' +
+        'This tile is not part of a complete target cycle the coach can trace yet. Try another unsolved tile.</div>';
+    }
+  }
+
+  if (inFree()) {
+    var rowsDone = ls.flags.slice(0,4).filter(Boolean).length;
+    var colsDone = ls.flags.slice(4).filter(Boolean).length;
+    h += '<div class="status">' + rowsDone + '/4 rows \u00B7 ' + colsDone + '/4 columns \u00B7 ' +
+      S.swaps + ' of 20 swaps</div>';
+    if (ls.done === 8) {
+      h += '<div class="banner">Solved in ' + S.swaps + (S.swaps === 1 ? ' swap' : ' swaps') + '</div>';
+    }
+    h += '<div class="lines">';
+    h += '<button class="sbtn" data-act="undo"' + (!S.hist || !S.hist.length ? ' disabled aria-disabled="true"' : '') + '>\u21b6 Undo</button>';
+    h += '<button class="sbtn" data-act="restart">Restart</button>';
+    h += '</div>';
+  } else if (inPlay()) {
+    h += '<div class="status">' + ps.solved + ' of ' + ps.tiles + ' green \u00B7 ' +
+      S.swaps + (S.swaps === 1 ? ' swap' : ' swaps') + '</div>';
+    if (ps.complete) {
+      h += '<div class="banner">Solved in ' + S.swaps + (S.swaps === 1 ? ' swap' : ' swaps') + '</div>';
+    }
+    h += '<div class="lines"><button class="sbtn" data-act="undo"' + (!S.hist || !S.hist.length ? ' disabled aria-disabled="true"' : '') + '>\u21b6 Undo</button>' +
+      '<button class="sbtn" data-act="restart">Restart</button></div>';
+  } else if (inFix()) {
+    h += '<div class="status">Fix grid</div>';
+  } else {
+    var list = subsetOf("red"), done = 0;
+    for (i = 0; i < list.length; i++) if (S.reds[list[i]] || S.yellow[list[i]]) done++;
+    h += '<div class="status">Red targets \u00B7 ' + done + ' of ' + list.length + ' set</div>';
+  }
+
+  /* fix-mode panel for the selected square */
+  if (inFix() && S.sel !== null) {
+    if (isClue(S.sel)) {
+      h += '<div class="ptrlabel">Pointers on this clue</div><div class="ptrrow">';
+      POINTERS.forEach(function (p) {
+        var on = S.dirs[S.sel][p.axis] === p.dir;
+        h += '<button class="ptr' + (on ? " on" : "") + '" data-act="ptr" data-dir="' +
+          p.dir + '" data-axis="' + p.axis + '" aria-label="Pointer ' + p.dir + '">' + p.glyph + '</button>';
+      });
+      h += '</div>';
+    } else {
+      h += '<div class="nextwrap"><button class="wide ' + (S.green[S.sel] ? "lime" : "plain") +
+        '" data-act="togglegreen">' + (S.green[S.sel] ? "This square is green" : "Make this square green") +
+        '</button></div>';
+    }
+  }
+
+  if (!inPlay()) {
+    h += '<div class="keypad">';
+    ["1","2","3","4","5","6","7","8","9","0"].forEach(function (d) {
+      h += '<button class="key' + (inFix() ? "" : " redtext") +
+        '" data-act="digit" data-d="' + d + '">' + d + '</button>';
+    });
+    h += '<button class="key" data-act="back" aria-label="Delete">\u232B</button>';
+    h += '<button class="key ink" data-act="advance" aria-label="Next cell">\u2192</button>';
+    h += '</div>';
+    if (!inFix()) {
+      var isY = S.sel !== null && S.yellow[S.sel];
+      h += '<div class="nextwrap"><button class="wide ' + (isY ? "amber" : "plain") +
+        '" data-act="asis">' + (isY ? "Marked as-is - tap to undo" : "Mark as-is (cannot work it out)") +
+        '</button></div>';
+      h += '<div class="nextwrap"><button class="wide ink" data-act="free">' +
+        '\u25B6 Play - just swap tiles</button></div>';
+      h += '<div class="nextwrap"><button class="wide ' + (left ? "off" : "lime") + '" data-act="play">' +
+        (left ? '\u25B6 Guided play - ' + left + ' target' + (left === 1 ? '' : 's') + ' to set'
+              : '\u25B6 Guided play') + '</button></div>';
+    }
+  }
+
+  h += '<div class="footer">';
+  h += '<button class="sbtn" data-act="clearred"' + (inPlay() ? ' disabled style="opacity:.4"' : '') +
+    '>Clear red</button>';
+  h += '<button class="sbtn" data-act="reload">' + (S.scanned ? "Built-in" : "Reload " + PUZZLE_NO) + '</button>';
+  h += '<button class="sbtn' + (S.armClear ? " armed" : "") + '" data-act="clear">' +
+    (S.armClear ? "Tap again" : "Clear grid") + '</button>';
+  h += '</div>';
+
+  h += '</div>';
+  document.getElementById("app").innerHTML = h;
+}
+
+function update() { save(); render(); }
+
+/* ---------- events ---------- */
+
+var armTimer = null;
+
+document.getElementById("app").addEventListener("click", function (ev) {
+  var el = ev.target.closest ? ev.target.closest("[data-act]") : null;
+  if (!el) return;
+  var act = el.getAttribute("data-act");
+  if (act !== "clear" && S.armClear) S.armClear = false;
+  if (act !== "scan") S.msg = null;
+
+  if (act === "scan") { document.getElementById("shotfile").click(); return; }
+  if (act === "cell") { tapCell(Number(el.getAttribute("data-i"))); return; }
+  if (act === "digit") { pressDigit(el.getAttribute("data-d")); return; }
+  if (act === "back") { backspace(); return; }
+  if (act === "advance") { advance(); return; }
+  if (act === "asis") { markAsIs(); return; }
+  if (act === "ptr") { togglePointer(el.getAttribute("data-dir"), el.getAttribute("data-axis")); return; }
+  if (act === "togglegreen") { toggleGreen(); return; }
+  if (act === "togglefix") { setStep(inFix() ? "red" : "fix"); update(); return; }
+  if (act === "play") { enterPlay(); return; }
+  if (act === "free") { enterFree(); return; }
+  if (act === "undo") { undoSwap(); return; }
+  if (act === "edit") { S.pair = []; setStep("red"); update(); return; }
+  if (act === "restart") { restartPlay(); return; }
+  if (act === "clearred") { clearRed(); return; }
+  if (act === "reload") { reloadPuzzle(); return; }
+  if (act === "clear") {
+    if (S.armClear) { clearAll(); return; }
+    S.armClear = true; render();
+    if (armTimer) clearTimeout(armTimer);
+    armTimer = setTimeout(function () { S.armClear = false; render(); }, 4000);
+    return;
+  }
+});
+
+document.getElementById("shotfile").addEventListener("change", function (e) {
+  readShot(e.target.files && e.target.files[0]);
+  e.target.value = "";
+});
+
+["dragenter","dragover","dragleave","drop"].forEach(function (n) {
+  window.addEventListener(n, function (e) { e.preventDefault(); });
+});
+window.addEventListener("drop", function (e) {
+  if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length)
+    readShot(e.dataTransfer.files[0]);
+});
+window.addEventListener("paste", function (e) {
+  var it = e.clipboardData && e.clipboardData.items;
+  if (!it) return;
+  for (var i = 0; i < it.length; i++)
+    if (it[i].type.indexOf("image") === 0) { readShot(it[i].getAsFile()); return; }
+});
+
+window.addEventListener("keydown", function (e) {
+  if (inPlay()) return;
+  if (/^[0-9]$/.test(e.key)) { e.preventDefault(); pressDigit(e.key); }
+  else if (e.key === "Backspace") { e.preventDefault(); backspace(); }
+  else if (e.key === "ArrowRight" || e.key === "Enter") { advance(); }
+  else if (e.key === "ArrowLeft") {
+    var p = prevIn(S.sel === null ? N : S.sel);
+    if (p !== null) { S.sel = p; update(); }
+  }
+});
+
+restore();
+setStep(S.step === "play" ? "play" : S.step);
+render();
+
+})();
+</script>
+</body>
+</html>
