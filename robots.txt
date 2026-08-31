@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mikeinoz.github.io/numble-grid/sitemap.xml
