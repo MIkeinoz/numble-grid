@@ -4,32 +4,82 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Numble Grid – Number Waffle Helper & Strategy Trainer</title>
-  <meta name="description" content="Use Numble Grid to practise Number Waffle strategy, test number placements, undo moves, identify mistakes and improve your solving method.">
+  <meta name="description" content="Free Number Waffle helper and strategy trainer. Practise number placement, swaps and cycles, undo moves, spot mistakes and improve your solving method with Numble Grid.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mikeinoz.github.io/numble-grid/guide.html">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Numble Grid – Number Waffle Helper & Strategy Trainer">
-  <meta property="og:description" content="A free browser-based training tool for practising Number Waffle placement, swaps and solving strategy.">
+  <meta property="og:description" content="A free browser-based Number Waffle helper for practising number placement, swaps, cycles and solving strategy.">
   <meta property="og:url" content="https://mikeinoz.github.io/numble-grid/guide.html">
   <meta property="og:site_name" content="Numble Grid">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Numble Grid – Number Waffle Helper & Strategy Trainer">
-  <meta name="twitter:description" content="Practise Number Waffle strategy, test placements, undo moves and improve your solving method.">
+  <meta name="twitter:description" content="Practise Number Waffle strategy, placements, swaps and cycles with a free browser-based trainer.">
 
   <meta name="theme-color" content="#1A1A1A">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Numble Grid",
-    "url": "https://mikeinoz.github.io/numble-grid/",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "Any",
-    "isAccessibleForFree": true,
-    "description": "A free browser-based Number Waffle helper and strategy trainer for practising number placement, swaps, cycles and solving technique."
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Numble Grid",
+        "url": "https://mikeinoz.github.io/numble-grid/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires a modern web browser",
+        "isAccessibleForFree": true,
+        "description": "A free browser-based Number Waffle helper and strategy trainer for practising number placement, swaps, cycles and solving technique."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Numble Grid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Numble Grid is a free browser-based learning and strategy tool that helps Number Waffle players practise number placement, swaps, cycles and solving technique."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Numble Grid solve Number Waffle for me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Numble Grid is designed as a trainer rather than an automatic answer generator. It helps you identify target positions, test swaps, undo mistakes and understand efficient move sequences."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I use Numble Grid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open the app, load a puzzle screenshot or enter and correct the grid, work out the target number for each movable square, then use guided or free swapping to move the numbers into place."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a Number Waffle cycle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A cycle is a closed chain of misplaced numbers where each position contains a number needed by another position in the chain. Recognising cycles can reduce unnecessary swaps."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Numble Grid free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Numble Grid runs free in a modern web browser and does not require an account."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -129,6 +179,8 @@
       background:#f1f6e9;
       color:#3f4c32;
     }
+    .faq h3{margin-top:18px}
+    .faq h3:first-of-type{margin-top:10px}
     footer{
       text-align:center;
       padding:0 20px 42px;
@@ -155,7 +207,7 @@
     <section>
       <h2>What is Numble Grid?</h2>
       <p>Numble Grid is an interactive learning tool for people who enjoy Number Waffle and want to improve the way they solve the puzzle. Rather than simply giving you an answer, it is designed to help you work through placements and moves yourself.</p>
-      <p>You can reproduce the puzzle in the grid, test your reasoning, undo moves when needed and use the visual feedback to understand where a solving sequence went wrong.</p>
+      <p>You can load a puzzle screenshot, correct or reproduce the grid, test your reasoning, undo moves when needed and use the visual feedback to understand where a solving sequence went wrong.</p>
     </section>
 
     <section>
@@ -183,8 +235,27 @@
 
     <section>
       <h2>Use it on phone, tablet or computer</h2>
-      <p>Numble Grid runs directly in a modern web browser. There is no account to create and nothing to install before you start. Open the app, enter your puzzle and begin working through it.</p>
+      <p>Numble Grid runs directly in a modern web browser. There is no account to create and nothing to install before you start. Open the app, load or enter your puzzle and begin working through it.</p>
       <p><a class="cta" href="./">Play Numble Grid now</a></p>
+    </section>
+
+    <section class="faq">
+      <h2>Number Waffle helper FAQ</h2>
+
+      <h3>Does Numble Grid solve Number Waffle for me?</h3>
+      <p>Numble Grid is primarily a trainer rather than an automatic answer generator. It helps you determine target positions, test swaps, undo mistakes and understand why a move sequence works.</p>
+
+      <h3>How do I use Numble Grid?</h3>
+      <p>Open the app, load a puzzle screenshot or enter and correct the grid, then work out the target number for each movable square. Once the targets are ready, use Guided Swapping for assistance or free swapping to practise on your own.</p>
+
+      <h3>What is a Number Waffle cycle?</h3>
+      <p>A cycle is a closed chain of misplaced numbers where each position contains a number needed by another position in the chain. Recognising the complete cycle can help you solve several positions with fewer unnecessary moves.</p>
+
+      <h3>Can I undo a wrong move?</h3>
+      <p>Yes. Numble Grid lets you undo swaps and also step backwards through red-target changes, which makes it useful for learning from a sequence rather than restarting the puzzle.</p>
+
+      <h3>Is Numble Grid free?</h3>
+      <p>Yes. Numble Grid is free to use in a modern web browser and does not require an account.</p>
     </section>
 
     <section>
