@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numble Grid – Number Waffle Helper & Strategy Trainer</title>
+  <meta name="description" content="Use Numble Grid to practise Number Waffle strategy, test number placements, undo moves, identify mistakes and improve your solving method.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mikeinoz.github.io/numble-grid/guide.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Numble Grid – Number Waffle Helper & Strategy Trainer">
+  <meta property="og:description" content="A free browser-based training tool for practising Number Waffle placement, swaps and solving strategy.">
+  <meta property="og:url" content="https://mikeinoz.github.io/numble-grid/guide.html">
+  <meta property="og:site_name" content="Numble Grid">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Numble Grid – Number Waffle Helper & Strategy Trainer">
+  <meta name="twitter:description" content="Practise Number Waffle strategy, test placements, undo moves and improve your solving method.">
+
+  <meta name="theme-color" content="#1A1A1A">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Numble Grid",
+    "url": "https://mikeinoz.github.io/numble-grid/",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "isAccessibleForFree": true,
+    "description": "A free browser-based Number Waffle helper and strategy trainer for practising number placement, swaps, cycles and solving technique."
+  }
+  </script>
+
+  <style>
+    :root{
+      --ink:#1A1A1A;
+      --lime:#8DC63F;
+      --lime-dark:#67982C;
+      --paper:#EDEDE7;
+      --card:#F8F8F5;
+      --muted:#66665F;
+      --line:#DEDED6;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+      line-height:1.6;
+    }
+    .hero{
+      background:var(--ink);
+      color:#fff;
+      padding:52px 20px 46px;
+      text-align:center;
+      border-bottom:5px solid var(--lime);
+    }
+    .hero .eyebrow{
+      margin:0 0 10px;
+      color:var(--lime);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    h1{
+      max-width:900px;
+      margin:0 auto 14px;
+      font-size:clamp(32px,6vw,54px);
+      line-height:1.08;
+      letter-spacing:-.03em;
+    }
+    .hero p{
+      max-width:720px;
+      margin:0 auto 24px;
+      color:#e8e8e2;
+      font-size:18px;
+    }
+    .cta{
+      display:inline-block;
+      padding:13px 20px;
+      border-radius:9px;
+      background:var(--lime);
+      color:#fff;
+      font-weight:800;
+      text-decoration:none;
+      box-shadow:0 3px 0 var(--lime-dark);
+    }
+    .cta:focus,.cta:hover{filter:brightness(.97)}
+    main{max-width:880px;margin:0 auto;padding:28px 18px 54px}
+    section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:24px;
+      margin:18px 0;
+    }
+    h2{margin:0 0 10px;font-size:25px;line-height:1.25}
+    h3{margin:22px 0 6px;font-size:18px}
+    p{margin:9px 0}
+    ul{margin:10px 0 0;padding-left:22px}
+    li{margin:7px 0}
+    .steps{counter-reset:step;list-style:none;padding:0;margin:14px 0 0}
+    .steps li{
+      counter-increment:step;
+      position:relative;
+      padding:0 0 14px 44px;
+      min-height:34px;
+    }
+    .steps li::before{
+      content:counter(step);
+      position:absolute;
+      left:0;top:0;
+      width:30px;height:30px;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--ink);
+      color:#fff;
+      font-weight:800;
+    }
+    .note{
+      margin-top:18px;
+      padding:14px 16px;
+      border-left:4px solid var(--lime);
+      background:#f1f6e9;
+      color:#3f4c32;
+    }
+    footer{
+      text-align:center;
+      padding:0 20px 42px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    footer a{color:inherit}
+    @media (max-width:600px){
+      .hero{padding:40px 18px 36px}
+      .hero p{font-size:16px}
+      section{padding:20px}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Free browser-based strategy trainer</p>
+    <h1>Numble Grid – Number Waffle Helper</h1>
+    <p>Practise number placement, test moves, undo mistakes and build a more efficient strategy for solving Number Waffle puzzles.</p>
+    <a class="cta" href="./" aria-label="Open the Numble Grid app">Open Numble Grid</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is Numble Grid?</h2>
+      <p>Numble Grid is an interactive learning tool for people who enjoy Number Waffle and want to improve the way they solve the puzzle. Rather than simply giving you an answer, it is designed to help you work through placements and moves yourself.</p>
+      <p>You can reproduce the puzzle in the grid, test your reasoning, undo moves when needed and use the visual feedback to understand where a solving sequence went wrong.</p>
+    </section>
+
+    <section>
+      <h2>How Numble Grid helps</h2>
+      <ul>
+        <li><strong>Practise number placement</strong> without losing track of your working.</li>
+        <li><strong>Undo moves</strong> so you can step backwards through a solving sequence.</li>
+        <li><strong>Spot incorrect placements</strong> and correct them before continuing.</li>
+        <li><strong>Work with swaps and cycles</strong> to reduce unnecessary moves.</li>
+        <li><strong>Build a repeatable strategy</strong> instead of relying on trial and error.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>A simple Number Waffle strategy</h2>
+      <ol class="steps">
+        <li>Start with the cells you can place with the greatest confidence.</li>
+        <li>Look for numbers whose correct destination is already identifiable from the surrounding constraints.</li>
+        <li>Before swapping, check whether the move also puts the displaced number closer to its own destination.</li>
+        <li>When several misplaced numbers depend on one another, trace the sequence as a cycle rather than treating each move independently.</li>
+        <li>Use Numble Grid to test the sequence, then undo and revise it if you find a more efficient path.</li>
+      </ol>
+      <div class="note"><strong>Goal:</strong> use the tool as a trainer. The more you recognise placements and cycles yourself, the less assistance you should need over time.</div>
+    </section>
+
+    <section>
+      <h2>Use it on phone, tablet or computer</h2>
+      <p>Numble Grid runs directly in a modern web browser. There is no account to create and nothing to install before you start. Open the app, enter your puzzle and begin working through it.</p>
+      <p><a class="cta" href="./">Play Numble Grid now</a></p>
+    </section>
+
+    <section>
+      <h2>Independent player-made tool</h2>
+      <p>Numble Grid is an independent learning and strategy tool. It is not affiliated with, endorsed by, or sponsored by Waffle Studio or the creators of Number Waffle. Product and game names belong to their respective owners.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Numble Grid · Free Number Waffle helper and strategy trainer</p>
+  </footer>
+</body>
+</html>
